@@ -1,0 +1,9 @@
+version: '3'
+services:
+  mysqldb:
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+      MYSQL_ROOT_USERNAME: root
+    ports:
+        - "3306:3306"
