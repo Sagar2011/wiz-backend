@@ -61,7 +61,9 @@ public class AuthController {
           return new ResponseEntity<ResponseModel>(responseModel,HttpStatus.OK);
     }catch (Exception ex){
             logger.error("exception occured at {}", ex.getMessage());
-            return null;
+          responseModel.setStatusCode(403);
+          responseModel.setMessage("Wrong Duplicates");
+          return new ResponseEntity<ResponseModel>(responseModel,HttpStatus.FORBIDDEN);
       }
     }
 
@@ -78,7 +80,9 @@ public class AuthController {
             return new ResponseEntity<ResponseModel>(responseModel,HttpStatus.OK);
         }catch (Exception ex){
             logger.error("exception occured at {}", ex.getMessage());
-            return null;
+            responseModel.setStatusCode(403);
+            responseModel.setMessage("Wrong Duplicates");
+            return new ResponseEntity<ResponseModel>(responseModel,HttpStatus.FORBIDDEN);
         }
     }
 
