@@ -23,4 +23,4 @@
   ```
   # port started at http://localhost:9000
   
-  ## note: for mysql db you can run mysql server without docker but remember that its running on 3306 port due to configuration the spring boot project.
+ - note: for mysql db you can run mysql server without docker but remember that its running on 3306 port due to configuration in the spring boot project.
