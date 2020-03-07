@@ -22,7 +22,7 @@ import java.util.stream.Collectors;
 @Service
 public class AuthenticationService {
 
-    private static final String SigningKey = "W!z-$ecret";
+        private static final String SigningKey = "W!z-$ecret";
     private static final Logger logger = LoggerFactory.getLogger(AuthenticationService.class);
 
     public static Authentication getAuthentication(HttpServletRequest request) {

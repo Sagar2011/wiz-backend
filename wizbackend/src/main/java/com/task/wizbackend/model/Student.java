@@ -1,8 +1,6 @@
 package com.task.wizbackend.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Index;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity
@@ -11,6 +9,8 @@ import java.util.Date;
 })
 public class Student {
 
+    @Id @GeneratedValue(strategy = GenerationType.AUTO)
+    private int studentId;
     private String name;
     private String username;
     private String password;
@@ -19,6 +19,14 @@ public class Student {
     private Date createdAt;
 
     public Student() {
+    }
+
+    public int getStudentId() {
+        return studentId;
+    }
+
+    public void setStudentId(int studentId) {
+        this.studentId = studentId;
     }
 
     public Date getCreatedAt() {

@@ -1,0 +1,776 @@
+2020-03-07 12:52:28.329  WARN 72399 --- [main] o.s.boot.StartupInfoLogger               : InetAddress.getLocalHost().getHostName() took 5003 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2020-03-07 12:52:33.343  INFO 72399 --- [main] c.task.wizbackend.WizbackendApplication  : Starting WizbackendApplication on Sagars-MacBook-Air.local with PID 72399 (/Users/sagar/Desktop/wiz-backend/wizbackend/target/classes started by sagar in /Users/sagar/Desktop/wiz-backend/wizbackend)
+2020-03-07 12:52:33.344 DEBUG 72399 --- [main] c.task.wizbackend.WizbackendApplication  : Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-03-07 12:52:33.345  INFO 72399 --- [main] c.task.wizbackend.WizbackendApplication  : No active profile set, falling back to default profiles: default
+2020-03-07 12:52:34.820  INFO 72399 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-03-07 12:52:34.978  INFO 72399 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 135ms. Found 1 JPA repository interfaces.
+2020-03-07 12:52:36.314  INFO 72399 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9000 (http)
+2020-03-07 12:52:36.348  INFO 72399 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-07 12:52:36.368  INFO 72399 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-07 12:52:36.594  INFO 72399 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-07 12:52:36.594  INFO 72399 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3155 ms
+2020-03-07 12:52:37.995  INFO 72399 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-03-07 12:52:38.003  WARN 72399 --- [main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2020-03-07 12:52:38.556  INFO 72399 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-03-07 12:52:39.083  WARN 72399 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: No identifier specified for entity: com.task.wizbackend.model.Student
+2020-03-07 12:52:39.084  INFO 72399 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-03-07 12:52:39.093  INFO 72399 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-03-07 12:52:39.099  INFO 72399 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-03-07 12:52:39.126  INFO 72399 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-03-07 12:52:39.141 ERROR 72399 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: No identifier specified for entity: com.task.wizbackend.model.Student
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1108) ~[spring-context-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:868) ~[spring-context-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.2.5.RELEASE.jar:2.2.5.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) [spring-boot-2.2.5.RELEASE.jar:2.2.5.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.2.5.RELEASE.jar:2.2.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-2.2.5.RELEASE.jar:2.2.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) [spring-boot-2.2.5.RELEASE.jar:2.2.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) [spring-boot-2.2.5.RELEASE.jar:2.2.5.RELEASE]
+	at com.task.wizbackend.WizbackendApplication.main(WizbackendApplication.java:10) [classes/:na]
+Caused by: org.hibernate.AnnotationException: No identifier specified for entity: com.task.wizbackend.model.Student
+	at org.hibernate.cfg.InheritanceState.determineDefaultAccessType(InheritanceState.java:266) ~[hibernate-core-5.4.12.Final.jar:5.4.12.Final]
+	at org.hibernate.cfg.InheritanceState.getElementsToProcess(InheritanceState.java:211) ~[hibernate-core-5.4.12.Final.jar:5.4.12.Final]
+	at org.hibernate.cfg.AnnotationBinder.bindClass(AnnotationBinder.java:781) ~[hibernate-core-5.4.12.Final.jar:5.4.12.Final]
+	at org.hibernate.boot.model.source.internal.annotations.AnnotationMetadataSourceProcessorImpl.processEntityHierarchies(AnnotationMetadataSourceProcessorImpl.java:254) ~[hibernate-core-5.4.12.Final.jar:5.4.12.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess$1.processEntityHierarchies(MetadataBuildingProcess.java:230) ~[hibernate-core-5.4.12.Final.jar:5.4.12.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:273) ~[hibernate-core-5.4.12.Final.jar:5.4.12.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1202) ~[hibernate-core-5.4.12.Final.jar:5.4.12.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1233) ~[hibernate-core-5.4.12.Final.jar:5.4.12.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:391) ~[spring-orm-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:378) ~[spring-orm-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1792) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	... 16 common frames omitted
+
+2020-03-07 12:53:20.893  WARN 72414 --- [main] o.s.boot.StartupInfoLogger               : InetAddress.getLocalHost().getHostName() took 5003 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2020-03-07 12:53:25.904  INFO 72414 --- [main] c.task.wizbackend.WizbackendApplication  : Starting WizbackendApplication on Sagars-MacBook-Air.local with PID 72414 (/Users/sagar/Desktop/wiz-backend/wizbackend/target/classes started by sagar in /Users/sagar/Desktop/wiz-backend/wizbackend)
+2020-03-07 12:53:25.906 DEBUG 72414 --- [main] c.task.wizbackend.WizbackendApplication  : Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-03-07 12:53:25.907  INFO 72414 --- [main] c.task.wizbackend.WizbackendApplication  : No active profile set, falling back to default profiles: default
+2020-03-07 12:53:27.043  INFO 72414 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-03-07 12:53:27.165  INFO 72414 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 106ms. Found 1 JPA repository interfaces.
+2020-03-07 12:53:28.242  INFO 72414 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9000 (http)
+2020-03-07 12:53:28.255  INFO 72414 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-07 12:53:28.255  INFO 72414 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-07 12:53:28.415  INFO 72414 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-07 12:53:28.415  INFO 72414 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2429 ms
+2020-03-07 12:53:29.225  INFO 72414 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-03-07 12:53:29.230  WARN 72414 --- [main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2020-03-07 12:53:29.487  INFO 72414 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-03-07 12:53:29.875  WARN 72414 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: No identifier specified for entity: com.task.wizbackend.model.Student
+2020-03-07 12:53:29.875  INFO 72414 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-03-07 12:53:29.907  INFO 72414 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-03-07 12:53:29.918  INFO 72414 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-03-07 12:53:29.933  INFO 72414 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-03-07 12:53:29.942 ERROR 72414 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: No identifier specified for entity: com.task.wizbackend.model.Student
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1108) ~[spring-context-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:868) ~[spring-context-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.2.5.RELEASE.jar:2.2.5.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) [spring-boot-2.2.5.RELEASE.jar:2.2.5.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.2.5.RELEASE.jar:2.2.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-2.2.5.RELEASE.jar:2.2.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) [spring-boot-2.2.5.RELEASE.jar:2.2.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) [spring-boot-2.2.5.RELEASE.jar:2.2.5.RELEASE]
+	at com.task.wizbackend.WizbackendApplication.main(WizbackendApplication.java:10) [classes/:na]
+Caused by: org.hibernate.AnnotationException: No identifier specified for entity: com.task.wizbackend.model.Student
+	at org.hibernate.cfg.InheritanceState.determineDefaultAccessType(InheritanceState.java:266) ~[hibernate-core-5.4.12.Final.jar:5.4.12.Final]
+	at org.hibernate.cfg.InheritanceState.getElementsToProcess(InheritanceState.java:211) ~[hibernate-core-5.4.12.Final.jar:5.4.12.Final]
+	at org.hibernate.cfg.AnnotationBinder.bindClass(AnnotationBinder.java:781) ~[hibernate-core-5.4.12.Final.jar:5.4.12.Final]
+	at org.hibernate.boot.model.source.internal.annotations.AnnotationMetadataSourceProcessorImpl.processEntityHierarchies(AnnotationMetadataSourceProcessorImpl.java:254) ~[hibernate-core-5.4.12.Final.jar:5.4.12.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess$1.processEntityHierarchies(MetadataBuildingProcess.java:230) ~[hibernate-core-5.4.12.Final.jar:5.4.12.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:273) ~[hibernate-core-5.4.12.Final.jar:5.4.12.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1202) ~[hibernate-core-5.4.12.Final.jar:5.4.12.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1233) ~[hibernate-core-5.4.12.Final.jar:5.4.12.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:391) ~[spring-orm-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:378) ~[spring-orm-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1792) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	... 16 common frames omitted
+
+2020-03-07 12:55:19.689  WARN 72428 --- [main] o.s.boot.StartupInfoLogger               : InetAddress.getLocalHost().getHostName() took 5004 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2020-03-07 12:55:24.705  INFO 72428 --- [main] c.task.wizbackend.WizbackendApplication  : Starting WizbackendApplication on Sagars-MacBook-Air.local with PID 72428 (/Users/sagar/Desktop/wiz-backend/wizbackend/target/classes started by sagar in /Users/sagar/Desktop/wiz-backend/wizbackend)
+2020-03-07 12:55:24.708 DEBUG 72428 --- [main] c.task.wizbackend.WizbackendApplication  : Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-03-07 12:55:24.710  INFO 72428 --- [main] c.task.wizbackend.WizbackendApplication  : No active profile set, falling back to default profiles: default
+2020-03-07 12:55:25.778  INFO 72428 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-03-07 12:55:25.917  INFO 72428 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 117ms. Found 1 JPA repository interfaces.
+2020-03-07 12:55:27.020  INFO 72428 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9000 (http)
+2020-03-07 12:55:27.036  INFO 72428 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-07 12:55:27.036  INFO 72428 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-07 12:55:27.187  INFO 72428 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-07 12:55:27.187  INFO 72428 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2404 ms
+2020-03-07 12:55:27.937  INFO 72428 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-03-07 12:55:27.941  WARN 72428 --- [main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2020-03-07 12:55:28.219  INFO 72428 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-03-07 12:55:30.051  INFO 72428 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-03-07 12:55:30.136  WARN 72428 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-03-07 12:55:30.226  INFO 72428 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static java.lang.String com.task.wizbackend.serviceImpl.StudentService.jwtTokenCookieName
+2020-03-07 12:55:31.503  INFO 72428 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 25efb2c5-e809-49c6-b6d7-7017f6c57342
+
+2020-03-07 12:55:31.795  INFO 72428 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/'], []
+2020-03-07 12:55:31.795  INFO 72428 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/assets/**'], []
+2020-03-07 12:55:31.795  INFO 72428 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.js'], []
+2020-03-07 12:55:31.795  INFO 72428 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.css'], []
+2020-03-07 12:55:31.795  INFO 72428 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.eot'], []
+2020-03-07 12:55:31.796  INFO 72428 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.svg'], []
+2020-03-07 12:55:31.796  INFO 72428 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.woff2'], []
+2020-03-07 12:55:31.796  INFO 72428 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.ttf'], []
+2020-03-07 12:55:31.796  INFO 72428 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.woff'], []
+2020-03-07 12:55:31.796  INFO 72428 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.jpg'], []
+2020-03-07 12:55:31.797  INFO 72428 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.png'], []
+2020-03-07 12:55:31.802  INFO 72428 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.html'], []
+2020-03-07 12:55:31.802  INFO 72428 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/student'], []
+2020-03-07 12:55:31.805  INFO 72428 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/login'], []
+2020-03-07 12:55:31.805  INFO 72428 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.ico'], []
+2020-03-07 12:55:31.912  INFO 72428 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/**'], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3ca17943, org.springframework.security.web.context.SecurityContextPersistenceFilter@643ecfef, org.springframework.security.web.header.HeaderWriterFilter@541d4d9f, org.springframework.security.web.authentication.logout.LogoutFilter@27bc1d44, com.task.wizbackend.filter.JwtFilter@640c216b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2bb31455, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6c995c5d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5170bc02, org.springframework.security.web.session.SessionManagementFilter@aa752bb, org.springframework.security.web.access.ExceptionTranslationFilter@edb83f8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@45984654]
+2020-03-07 12:55:32.255  INFO 72428 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-07 12:55:32.734  INFO 72428 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9000 (http) with context path ''
+2020-03-07 12:55:32.741  INFO 72428 --- [main] c.task.wizbackend.WizbackendApplication  : Started WizbackendApplication in 23.869 seconds (JVM running for 24.688)
+2020-03-07 12:57:15.891  INFO 72428 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-07 12:57:15.895  INFO 72428 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-03-07 12:57:15.898  INFO 72428 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-03-07 12:57:15.940  INFO 72428 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-03-07 13:12:29.322  WARN 72714 --- [main] o.s.boot.StartupInfoLogger               : InetAddress.getLocalHost().getHostName() took 5006 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2020-03-07 13:12:34.338  INFO 72714 --- [main] c.task.wizbackend.WizbackendApplication  : Starting WizbackendApplication on Sagars-MacBook-Air.local with PID 72714 (/Users/sagar/Desktop/wiz-backend/wizbackend/target/classes started by sagar in /Users/sagar/Desktop/wiz-backend/wizbackend)
+2020-03-07 13:12:34.339 DEBUG 72714 --- [main] c.task.wizbackend.WizbackendApplication  : Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-03-07 13:12:34.340  INFO 72714 --- [main] c.task.wizbackend.WizbackendApplication  : No active profile set, falling back to default profiles: default
+2020-03-07 13:12:35.419  INFO 72714 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-03-07 13:12:35.593  INFO 72714 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 142ms. Found 1 JPA repository interfaces.
+2020-03-07 13:12:36.682  INFO 72714 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9000 (http)
+2020-03-07 13:12:36.704  INFO 72714 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-07 13:12:36.705  INFO 72714 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-07 13:12:36.840  INFO 72714 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-07 13:12:36.841  INFO 72714 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2433 ms
+2020-03-07 13:12:38.290  INFO 72714 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-03-07 13:12:38.297  WARN 72714 --- [main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2020-03-07 13:12:38.684  INFO 72714 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-03-07 13:12:40.597  INFO 72714 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-03-07 13:12:40.667  WARN 72714 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-03-07 13:12:40.730  INFO 72714 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static java.lang.String com.task.wizbackend.serviceImpl.StudentService.jwtTokenCookieName
+2020-03-07 13:12:41.550  INFO 72714 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: bad6cdd9-6149-4a78-8599-9e8adf30f56f
+
+2020-03-07 13:12:41.647  INFO 72714 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/'], []
+2020-03-07 13:12:41.647  INFO 72714 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/assets/**'], []
+2020-03-07 13:12:41.648  INFO 72714 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.js'], []
+2020-03-07 13:12:41.648  INFO 72714 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.css'], []
+2020-03-07 13:12:41.648  INFO 72714 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.eot'], []
+2020-03-07 13:12:41.648  INFO 72714 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.svg'], []
+2020-03-07 13:12:41.648  INFO 72714 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.woff2'], []
+2020-03-07 13:12:41.648  INFO 72714 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.ttf'], []
+2020-03-07 13:12:41.648  INFO 72714 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.woff'], []
+2020-03-07 13:12:41.648  INFO 72714 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.jpg'], []
+2020-03-07 13:12:41.648  INFO 72714 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.png'], []
+2020-03-07 13:12:41.648  INFO 72714 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.html'], []
+2020-03-07 13:12:41.649  INFO 72714 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/student'], []
+2020-03-07 13:12:41.649  INFO 72714 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/login'], []
+2020-03-07 13:12:41.649  INFO 72714 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.ico'], []
+2020-03-07 13:12:41.705  INFO 72714 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/**'], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@50a7c72b, org.springframework.security.web.context.SecurityContextPersistenceFilter@3e0a9b1d, org.springframework.security.web.header.HeaderWriterFilter@1b409a79, org.springframework.security.web.authentication.logout.LogoutFilter@464aeb09, com.task.wizbackend.filter.JwtFilter@54c11750, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2035d65b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@394fb736, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@221b77d7, org.springframework.security.web.session.SessionManagementFilter@f2fb225, org.springframework.security.web.access.ExceptionTranslationFilter@2dcd0e41, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6e0d16a4]
+2020-03-07 13:12:41.976  INFO 72714 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-07 13:12:42.335  INFO 72714 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9000 (http) with context path ''
+2020-03-07 13:12:42.340  INFO 72714 --- [main] c.task.wizbackend.WizbackendApplication  : Started WizbackendApplication in 23.784 seconds (JVM running for 24.712)
+2020-03-07 13:24:48.465  INFO 72714 --- [http-nio-9000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-07 13:24:48.468  INFO 72714 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-07 13:24:48.495  INFO 72714 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 26 ms
+2020-03-07 13:31:38.276  INFO 72714 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-07 13:31:38.279  INFO 72714 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-03-07 13:31:38.285  INFO 72714 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-03-07 13:31:38.321  INFO 72714 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-03-07 13:31:56.659  WARN 72942 --- [main] o.s.boot.StartupInfoLogger               : InetAddress.getLocalHost().getHostName() took 5004 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2020-03-07 13:32:01.674  INFO 72942 --- [main] c.task.wizbackend.WizbackendApplication  : Starting WizbackendApplication on Sagars-MacBook-Air.local with PID 72942 (/Users/sagar/Desktop/wiz-backend/wizbackend/target/classes started by sagar in /Users/sagar/Desktop/wiz-backend/wizbackend)
+2020-03-07 13:32:01.675 DEBUG 72942 --- [main] c.task.wizbackend.WizbackendApplication  : Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-03-07 13:32:01.677  INFO 72942 --- [main] c.task.wizbackend.WizbackendApplication  : No active profile set, falling back to default profiles: default
+2020-03-07 13:32:02.733  INFO 72942 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-03-07 13:32:02.859  INFO 72942 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 104ms. Found 1 JPA repository interfaces.
+2020-03-07 13:32:03.990  INFO 72942 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9000 (http)
+2020-03-07 13:32:04.006  INFO 72942 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-07 13:32:04.007  INFO 72942 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-07 13:32:04.166  INFO 72942 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-07 13:32:04.167  INFO 72942 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2421 ms
+2020-03-07 13:32:05.121  INFO 72942 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-03-07 13:32:05.130  WARN 72942 --- [main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2020-03-07 13:32:05.392  INFO 72942 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-03-07 13:32:06.480  INFO 72942 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-03-07 13:32:06.559  WARN 72942 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-03-07 13:32:06.657  INFO 72942 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static java.lang.String com.task.wizbackend.serviceImpl.StudentService.jwtTokenCookieName
+2020-03-07 13:32:07.341  INFO 72942 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 70906ee9-a795-46b3-8d28-808891b6c0fe
+
+2020-03-07 13:32:07.436  INFO 72942 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/'], []
+2020-03-07 13:32:07.436  INFO 72942 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/assets/**'], []
+2020-03-07 13:32:07.436  INFO 72942 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.js'], []
+2020-03-07 13:32:07.436  INFO 72942 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.css'], []
+2020-03-07 13:32:07.436  INFO 72942 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.eot'], []
+2020-03-07 13:32:07.436  INFO 72942 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.svg'], []
+2020-03-07 13:32:07.437  INFO 72942 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.woff2'], []
+2020-03-07 13:32:07.437  INFO 72942 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.ttf'], []
+2020-03-07 13:32:07.437  INFO 72942 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.woff'], []
+2020-03-07 13:32:07.437  INFO 72942 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.jpg'], []
+2020-03-07 13:32:07.437  INFO 72942 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.png'], []
+2020-03-07 13:32:07.437  INFO 72942 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.html'], []
+2020-03-07 13:32:07.437  INFO 72942 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/student'], []
+2020-03-07 13:32:07.437  INFO 72942 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/login'], []
+2020-03-07 13:32:07.437  INFO 72942 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.ico'], []
+2020-03-07 13:32:07.520  INFO 72942 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/**'], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7b377a53, org.springframework.security.web.context.SecurityContextPersistenceFilter@7c901203, org.springframework.security.web.header.HeaderWriterFilter@6df11e91, org.springframework.web.filter.CorsFilter@1b0e031b, org.springframework.security.web.authentication.logout.LogoutFilter@41a16eb3, com.task.wizbackend.filter.JwtFilter@6009cd34, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@79f5a6ed, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@120350eb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@65844c96, org.springframework.security.web.session.SessionManagementFilter@7de35070, org.springframework.security.web.access.ExceptionTranslationFilter@5fd8dd66, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2755617b]
+2020-03-07 13:32:07.767  INFO 72942 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-07 13:32:08.111  INFO 72942 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9000 (http) with context path ''
+2020-03-07 13:32:08.116  INFO 72942 --- [main] c.task.wizbackend.WizbackendApplication  : Started WizbackendApplication in 22.306 seconds (JVM running for 23.28)
+2020-03-07 13:32:29.419  INFO 72942 --- [http-nio-9000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-07 13:32:29.421  INFO 72942 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-07 13:32:29.434  INFO 72942 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
+2020-03-07 13:39:57.441  INFO 72942 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-07 13:39:57.443  INFO 72942 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-03-07 13:39:57.446  INFO 72942 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-03-07 13:39:57.479  INFO 72942 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-03-07 13:40:14.525  WARN 73015 --- [main] o.s.boot.StartupInfoLogger               : InetAddress.getLocalHost().getHostName() took 5002 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2020-03-07 13:40:19.540  INFO 73015 --- [main] c.task.wizbackend.WizbackendApplication  : Starting WizbackendApplication on Sagars-MacBook-Air.local with PID 73015 (/Users/sagar/Desktop/wiz-backend/wizbackend/target/classes started by sagar in /Users/sagar/Desktop/wiz-backend/wizbackend)
+2020-03-07 13:40:19.541 DEBUG 73015 --- [main] c.task.wizbackend.WizbackendApplication  : Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-03-07 13:40:19.543  INFO 73015 --- [main] c.task.wizbackend.WizbackendApplication  : No active profile set, falling back to default profiles: default
+2020-03-07 13:40:20.592  INFO 73015 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-03-07 13:40:20.697  INFO 73015 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 92ms. Found 1 JPA repository interfaces.
+2020-03-07 13:40:21.714  INFO 73015 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9000 (http)
+2020-03-07 13:40:21.738  INFO 73015 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-07 13:40:21.739  INFO 73015 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-07 13:40:21.876  INFO 73015 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-07 13:40:21.877  INFO 73015 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2266 ms
+2020-03-07 13:40:22.785  INFO 73015 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-03-07 13:40:22.791  WARN 73015 --- [main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2020-03-07 13:40:23.102  INFO 73015 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-03-07 13:40:24.131  INFO 73015 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-03-07 13:40:24.196  WARN 73015 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-03-07 13:40:24.257  INFO 73015 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static java.lang.String com.task.wizbackend.serviceImpl.StudentService.jwtTokenCookieName
+2020-03-07 13:40:24.928  INFO 73015 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 20796bed-3eb7-4176-80ef-4bd61a2c52ff
+
+2020-03-07 13:40:25.027  INFO 73015 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/'], []
+2020-03-07 13:40:25.028  INFO 73015 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/assets/**'], []
+2020-03-07 13:40:25.028  INFO 73015 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.js'], []
+2020-03-07 13:40:25.028  INFO 73015 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.css'], []
+2020-03-07 13:40:25.028  INFO 73015 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.eot'], []
+2020-03-07 13:40:25.029  INFO 73015 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.svg'], []
+2020-03-07 13:40:25.029  INFO 73015 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.woff2'], []
+2020-03-07 13:40:25.029  INFO 73015 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.ttf'], []
+2020-03-07 13:40:25.029  INFO 73015 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.woff'], []
+2020-03-07 13:40:25.029  INFO 73015 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.jpg'], []
+2020-03-07 13:40:25.029  INFO 73015 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.png'], []
+2020-03-07 13:40:25.029  INFO 73015 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.html'], []
+2020-03-07 13:40:25.029  INFO 73015 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/student'], []
+2020-03-07 13:40:25.030  INFO 73015 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/login'], []
+2020-03-07 13:40:25.030  INFO 73015 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.ico'], []
+2020-03-07 13:40:25.105  INFO 73015 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/**'], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@dc1fadd, org.springframework.security.web.context.SecurityContextPersistenceFilter@203b953c, org.springframework.security.web.header.HeaderWriterFilter@643ecfef, org.springframework.web.filter.CorsFilter@3ef3f661, org.springframework.security.web.authentication.logout.LogoutFilter@1b409a79, com.task.wizbackend.filter.JwtFilter@baa9ce4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@41a16eb3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@684372d0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5b332439, org.springframework.security.web.session.SessionManagementFilter@6e807e2, org.springframework.security.web.access.ExceptionTranslationFilter@aa752bb, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3bd08435]
+2020-03-07 13:40:25.369  INFO 73015 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-07 13:40:25.724  INFO 73015 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9000 (http) with context path ''
+2020-03-07 13:40:25.729  INFO 73015 --- [main] c.task.wizbackend.WizbackendApplication  : Started WizbackendApplication in 22.009 seconds (JVM running for 22.846)
+2020-03-07 13:40:57.178  INFO 73015 --- [http-nio-9000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-07 13:40:57.179  INFO 73015 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-07 13:40:57.198  INFO 73015 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 18 ms
+2020-03-07 13:44:18.872  INFO 73015 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-07 13:44:18.874  INFO 73015 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-03-07 13:44:18.877  INFO 73015 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-03-07 13:44:18.904  INFO 73015 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-03-07 13:44:34.082  WARN 73026 --- [main] o.s.boot.StartupInfoLogger               : InetAddress.getLocalHost().getHostName() took 5002 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2020-03-07 13:44:39.096  INFO 73026 --- [main] c.task.wizbackend.WizbackendApplication  : Starting WizbackendApplication on Sagars-MacBook-Air.local with PID 73026 (/Users/sagar/Desktop/wiz-backend/wizbackend/target/classes started by sagar in /Users/sagar/Desktop/wiz-backend/wizbackend)
+2020-03-07 13:44:39.097 DEBUG 73026 --- [main] c.task.wizbackend.WizbackendApplication  : Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-03-07 13:44:39.098  INFO 73026 --- [main] c.task.wizbackend.WizbackendApplication  : No active profile set, falling back to default profiles: default
+2020-03-07 13:44:40.147  INFO 73026 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-03-07 13:44:40.258  INFO 73026 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 98ms. Found 1 JPA repository interfaces.
+2020-03-07 13:44:41.516  INFO 73026 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9000 (http)
+2020-03-07 13:44:41.537  INFO 73026 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-07 13:44:41.538  INFO 73026 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-07 13:44:41.685  INFO 73026 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-07 13:44:41.686  INFO 73026 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2520 ms
+2020-03-07 13:44:42.534  INFO 73026 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-03-07 13:44:42.540  WARN 73026 --- [main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2020-03-07 13:44:42.825  INFO 73026 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-03-07 13:44:44.612  INFO 73026 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-03-07 13:44:44.706  WARN 73026 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-03-07 13:44:44.852  INFO 73026 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static java.lang.String com.task.wizbackend.serviceImpl.StudentService.jwtTokenCookieName
+2020-03-07 13:44:45.961  INFO 73026 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: fc5365f3-fb80-4512-bf05-1a214c9ec6e0
+
+2020-03-07 13:44:46.120  INFO 73026 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/'], []
+2020-03-07 13:44:46.120  INFO 73026 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/assets/**'], []
+2020-03-07 13:44:46.121  INFO 73026 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.js'], []
+2020-03-07 13:44:46.121  INFO 73026 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.css'], []
+2020-03-07 13:44:46.121  INFO 73026 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.eot'], []
+2020-03-07 13:44:46.121  INFO 73026 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.svg'], []
+2020-03-07 13:44:46.121  INFO 73026 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.woff2'], []
+2020-03-07 13:44:46.122  INFO 73026 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.ttf'], []
+2020-03-07 13:44:46.122  INFO 73026 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.woff'], []
+2020-03-07 13:44:46.122  INFO 73026 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.jpg'], []
+2020-03-07 13:44:46.122  INFO 73026 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.png'], []
+2020-03-07 13:44:46.122  INFO 73026 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.html'], []
+2020-03-07 13:44:46.122  INFO 73026 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/student'], []
+2020-03-07 13:44:46.122  INFO 73026 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/login'], []
+2020-03-07 13:44:46.123  INFO 73026 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.ico'], []
+2020-03-07 13:44:46.265  INFO 73026 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/**'], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@74a58a06, org.springframework.security.web.context.SecurityContextPersistenceFilter@8b41ad, org.springframework.security.web.header.HeaderWriterFilter@55c50f52, org.springframework.web.filter.CorsFilter@7308c820, org.springframework.security.web.authentication.logout.LogoutFilter@51fe7f15, com.task.wizbackend.filter.JwtFilter@5d601832, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1a497286, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@aa752bb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3ca17943, org.springframework.security.web.session.SessionManagementFilter@722787b5, org.springframework.security.web.access.ExceptionTranslationFilter@36ad5f2a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2c99c8d]
+2020-03-07 13:44:46.578  INFO 73026 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-07 13:44:47.084  INFO 73026 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9000 (http) with context path ''
+2020-03-07 13:44:47.091  INFO 73026 --- [main] c.task.wizbackend.WizbackendApplication  : Started WizbackendApplication in 23.901 seconds (JVM running for 24.732)
+2020-03-07 13:44:53.893  INFO 73026 --- [http-nio-9000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-07 13:44:53.895  INFO 73026 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-07 13:44:53.910  INFO 73026 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
+2020-03-07 13:46:22.378  INFO 73026 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-07 13:46:22.380  INFO 73026 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-03-07 13:46:22.384  INFO 73026 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-03-07 13:46:22.413  INFO 73026 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-03-07 13:46:39.830  WARN 73040 --- [main] o.s.boot.StartupInfoLogger               : InetAddress.getLocalHost().getHostName() took 5010 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2020-03-07 13:46:44.843  INFO 73040 --- [main] c.task.wizbackend.WizbackendApplication  : Starting WizbackendApplication on Sagars-MacBook-Air.local with PID 73040 (/Users/sagar/Desktop/wiz-backend/wizbackend/target/classes started by sagar in /Users/sagar/Desktop/wiz-backend/wizbackend)
+2020-03-07 13:46:44.845 DEBUG 73040 --- [main] c.task.wizbackend.WizbackendApplication  : Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-03-07 13:46:44.846  INFO 73040 --- [main] c.task.wizbackend.WizbackendApplication  : No active profile set, falling back to default profiles: default
+2020-03-07 13:46:45.892  INFO 73040 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-03-07 13:46:46.015  INFO 73040 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 105ms. Found 1 JPA repository interfaces.
+2020-03-07 13:46:47.153  INFO 73040 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9000 (http)
+2020-03-07 13:46:47.168  INFO 73040 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-07 13:46:47.168  INFO 73040 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-07 13:46:47.301  INFO 73040 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-07 13:46:47.301  INFO 73040 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2387 ms
+2020-03-07 13:46:48.165  INFO 73040 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-03-07 13:46:48.170  WARN 73040 --- [main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2020-03-07 13:46:48.451  INFO 73040 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-03-07 13:46:49.575  INFO 73040 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-03-07 13:46:49.641  WARN 73040 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-03-07 13:46:49.731  INFO 73040 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static java.lang.String com.task.wizbackend.serviceImpl.StudentService.jwtTokenCookieName
+2020-03-07 13:46:50.387  INFO 73040 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 617c2680-9339-464c-bfa9-27afe423f111
+
+2020-03-07 13:46:50.480  INFO 73040 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/'], []
+2020-03-07 13:46:50.480  INFO 73040 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/assets/**'], []
+2020-03-07 13:46:50.480  INFO 73040 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.js'], []
+2020-03-07 13:46:50.480  INFO 73040 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.css'], []
+2020-03-07 13:46:50.480  INFO 73040 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.eot'], []
+2020-03-07 13:46:50.480  INFO 73040 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.svg'], []
+2020-03-07 13:46:50.481  INFO 73040 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.woff2'], []
+2020-03-07 13:46:50.481  INFO 73040 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.ttf'], []
+2020-03-07 13:46:50.481  INFO 73040 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.woff'], []
+2020-03-07 13:46:50.481  INFO 73040 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.jpg'], []
+2020-03-07 13:46:50.481  INFO 73040 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.png'], []
+2020-03-07 13:46:50.481  INFO 73040 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.html'], []
+2020-03-07 13:46:50.481  INFO 73040 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/student'], []
+2020-03-07 13:46:50.482  INFO 73040 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/login'], []
+2020-03-07 13:46:50.482  INFO 73040 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.ico'], []
+2020-03-07 13:46:50.538  INFO 73040 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/**'], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3d40498a, org.springframework.security.web.context.SecurityContextPersistenceFilter@643ecfef, org.springframework.security.web.header.HeaderWriterFilter@541d4d9f, org.springframework.web.filter.CorsFilter@14d1737a, org.springframework.security.web.authentication.logout.LogoutFilter@27bc1d44, com.task.wizbackend.filter.JwtFilter@482a58c7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2bb31455, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6c995c5d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3e74fd84, org.springframework.security.web.session.SessionManagementFilter@aa752bb, org.springframework.security.web.access.ExceptionTranslationFilter@edb83f8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@45984654]
+2020-03-07 13:46:50.821  INFO 73040 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-07 13:46:51.237  INFO 73040 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9000 (http) with context path ''
+2020-03-07 13:46:51.241  INFO 73040 --- [main] c.task.wizbackend.WizbackendApplication  : Started WizbackendApplication in 22.518 seconds (JVM running for 23.391)
+2020-03-07 13:46:55.522  INFO 73040 --- [http-nio-9000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-07 13:46:55.523  INFO 73040 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-07 13:46:55.535  INFO 73040 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
+2020-03-07 13:48:49.769  INFO 73040 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-07 13:48:49.770  INFO 73040 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-03-07 13:48:49.773  INFO 73040 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-03-07 13:48:49.795  INFO 73040 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-03-07 13:49:06.681  WARN 73059 --- [main] o.s.boot.StartupInfoLogger               : InetAddress.getLocalHost().getHostName() took 5006 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2020-03-07 13:49:11.695  INFO 73059 --- [main] c.task.wizbackend.WizbackendApplication  : Starting WizbackendApplication on Sagars-MacBook-Air.local with PID 73059 (/Users/sagar/Desktop/wiz-backend/wizbackend/target/classes started by sagar in /Users/sagar/Desktop/wiz-backend/wizbackend)
+2020-03-07 13:49:11.696 DEBUG 73059 --- [main] c.task.wizbackend.WizbackendApplication  : Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-03-07 13:49:11.698  INFO 73059 --- [main] c.task.wizbackend.WizbackendApplication  : No active profile set, falling back to default profiles: default
+2020-03-07 13:49:12.769  INFO 73059 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-03-07 13:49:12.898  INFO 73059 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 104ms. Found 1 JPA repository interfaces.
+2020-03-07 13:49:13.951  INFO 73059 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9000 (http)
+2020-03-07 13:49:13.965  INFO 73059 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-07 13:49:13.966  INFO 73059 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-07 13:49:14.120  INFO 73059 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-07 13:49:14.120  INFO 73059 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2350 ms
+2020-03-07 13:49:14.895  INFO 73059 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-03-07 13:49:14.900  WARN 73059 --- [main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2020-03-07 13:49:15.176  INFO 73059 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-03-07 13:49:16.277  INFO 73059 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-03-07 13:49:16.363  WARN 73059 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-03-07 13:49:16.449  INFO 73059 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static java.lang.String com.task.wizbackend.serviceImpl.StudentService.jwtTokenCookieName
+2020-03-07 13:49:17.160  INFO 73059 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 5f2aa347-0910-48e7-aeea-04b102a082c6
+
+2020-03-07 13:49:17.253  INFO 73059 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/'], []
+2020-03-07 13:49:17.253  INFO 73059 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/assets/**'], []
+2020-03-07 13:49:17.253  INFO 73059 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.js'], []
+2020-03-07 13:49:17.253  INFO 73059 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.css'], []
+2020-03-07 13:49:17.253  INFO 73059 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.eot'], []
+2020-03-07 13:49:17.253  INFO 73059 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.svg'], []
+2020-03-07 13:49:17.254  INFO 73059 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.woff2'], []
+2020-03-07 13:49:17.254  INFO 73059 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.ttf'], []
+2020-03-07 13:49:17.254  INFO 73059 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.woff'], []
+2020-03-07 13:49:17.254  INFO 73059 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.jpg'], []
+2020-03-07 13:49:17.254  INFO 73059 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.png'], []
+2020-03-07 13:49:17.254  INFO 73059 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.html'], []
+2020-03-07 13:49:17.254  INFO 73059 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/student'], []
+2020-03-07 13:49:17.254  INFO 73059 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/login'], []
+2020-03-07 13:49:17.255  INFO 73059 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.ico'], []
+2020-03-07 13:49:17.309  INFO 73059 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/**'], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4e4894d, org.springframework.security.web.context.SecurityContextPersistenceFilter@bb8ead8, org.springframework.security.web.header.HeaderWriterFilter@4a9b3956, org.springframework.web.filter.CorsFilter@1de5cc88, org.springframework.security.web.authentication.logout.LogoutFilter@61911947, com.task.wizbackend.filter.JwtFilter@23e2c1ca, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6e807e2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@19d53ab4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2d4fb0d8, org.springframework.security.web.session.SessionManagementFilter@2e45a357, org.springframework.security.web.access.ExceptionTranslationFilter@2ccc9681, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3ca17943]
+2020-03-07 13:49:17.558  INFO 73059 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-07 13:49:17.902  INFO 73059 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9000 (http) with context path ''
+2020-03-07 13:49:17.906  INFO 73059 --- [main] c.task.wizbackend.WizbackendApplication  : Started WizbackendApplication in 22.052 seconds (JVM running for 22.944)
+2020-03-07 13:49:28.978  INFO 73059 --- [http-nio-9000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-07 13:49:28.980  INFO 73059 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-07 13:49:28.994  INFO 73059 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
+2020-03-07 13:54:40.074 ERROR 73059 --- [http-nio-9000-exec-4] o.h.engine.jdbc.spi.SqlExceptionHelper   : Table 'studentDB.student' doesn't exist
+2020-03-07 13:54:40.083 ERROR 73059 --- [http-nio-9000-exec-4] c.t.w.controller.AuthController          : exception occured at could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+2020-03-07 13:58:34.246 ERROR 73059 --- [http-nio-9000-exec-6] o.h.engine.jdbc.spi.SqlExceptionHelper   : Table 'studentDB.student' doesn't exist
+2020-03-07 13:58:34.249 ERROR 73059 --- [http-nio-9000-exec-6] c.t.w.controller.AuthController          : exception occured at could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+2020-03-07 13:58:46.944 ERROR 73059 --- [http-nio-9000-exec-7] o.h.engine.jdbc.spi.SqlExceptionHelper   : Table 'studentDB.student' doesn't exist
+2020-03-07 13:58:46.945 ERROR 73059 --- [http-nio-9000-exec-7] c.t.w.controller.AuthController          : exception occured at could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+2020-03-07 13:59:09.781  INFO 73059 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-07 13:59:09.783  INFO 73059 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-03-07 13:59:09.788  INFO 73059 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-03-07 13:59:09.842  INFO 73059 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-03-07 13:59:25.632  WARN 73153 --- [main] o.s.boot.StartupInfoLogger               : InetAddress.getLocalHost().getHostName() took 5003 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2020-03-07 13:59:30.643  INFO 73153 --- [main] c.task.wizbackend.WizbackendApplication  : Starting WizbackendApplication on Sagars-MacBook-Air.local with PID 73153 (/Users/sagar/Desktop/wiz-backend/wizbackend/target/classes started by sagar in /Users/sagar/Desktop/wiz-backend/wizbackend)
+2020-03-07 13:59:30.645 DEBUG 73153 --- [main] c.task.wizbackend.WizbackendApplication  : Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-03-07 13:59:30.646  INFO 73153 --- [main] c.task.wizbackend.WizbackendApplication  : No active profile set, falling back to default profiles: default
+2020-03-07 13:59:31.621  INFO 73153 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-03-07 13:59:31.729  INFO 73153 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 96ms. Found 1 JPA repository interfaces.
+2020-03-07 13:59:32.764  INFO 73153 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9000 (http)
+2020-03-07 13:59:32.782  INFO 73153 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-07 13:59:32.782  INFO 73153 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-07 13:59:32.921  INFO 73153 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-07 13:59:32.922  INFO 73153 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2210 ms
+2020-03-07 13:59:33.758  INFO 73153 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-03-07 13:59:33.764  WARN 73153 --- [main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2020-03-07 13:59:34.037  INFO 73153 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-03-07 13:59:35.057  INFO 73153 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-03-07 13:59:35.115  WARN 73153 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-03-07 13:59:35.181  INFO 73153 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static java.lang.String com.task.wizbackend.serviceImpl.StudentService.jwtTokenCookieName
+2020-03-07 13:59:35.868  INFO 73153 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 11690a36-a959-4787-9dfa-5ebd270d60a2
+
+2020-03-07 13:59:35.968  INFO 73153 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/'], []
+2020-03-07 13:59:35.969  INFO 73153 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/assets/**'], []
+2020-03-07 13:59:35.969  INFO 73153 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.js'], []
+2020-03-07 13:59:35.969  INFO 73153 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.css'], []
+2020-03-07 13:59:35.970  INFO 73153 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.eot'], []
+2020-03-07 13:59:35.970  INFO 73153 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.svg'], []
+2020-03-07 13:59:35.970  INFO 73153 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.woff2'], []
+2020-03-07 13:59:35.970  INFO 73153 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.ttf'], []
+2020-03-07 13:59:35.970  INFO 73153 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.woff'], []
+2020-03-07 13:59:35.970  INFO 73153 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.jpg'], []
+2020-03-07 13:59:35.970  INFO 73153 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.png'], []
+2020-03-07 13:59:35.971  INFO 73153 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.html'], []
+2020-03-07 13:59:35.971  INFO 73153 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/student'], []
+2020-03-07 13:59:35.971  INFO 73153 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/login'], []
+2020-03-07 13:59:35.971  INFO 73153 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.ico'], []
+2020-03-07 13:59:36.070  INFO 73153 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/**'], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4601047, org.springframework.security.web.context.SecurityContextPersistenceFilter@2dcd0e41, org.springframework.security.web.header.HeaderWriterFilter@6060146b, org.springframework.web.filter.CorsFilter@25e8e59, org.springframework.security.web.authentication.logout.LogoutFilter@4fc6e776, com.task.wizbackend.filter.JwtFilter@3a0896b3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1b409a79, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@74431b9c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@50a7c72b, org.springframework.security.web.session.SessionManagementFilter@61911947, org.springframework.security.web.access.ExceptionTranslationFilter@7bede4ea, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1b0e031b]
+2020-03-07 13:59:36.311  INFO 73153 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-07 13:59:36.674  INFO 73153 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9000 (http) with context path ''
+2020-03-07 13:59:36.679  INFO 73153 --- [main] c.task.wizbackend.WizbackendApplication  : Started WizbackendApplication in 21.846 seconds (JVM running for 22.692)
+2020-03-07 14:00:14.666  INFO 73153 --- [http-nio-9000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-07 14:00:14.668  INFO 73153 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-07 14:00:14.684  INFO 73153 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 16 ms
+2020-03-07 14:14:23.652  INFO 73153 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-07 14:14:23.657  INFO 73153 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-03-07 14:14:23.666  INFO 73153 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-03-07 14:14:23.713  INFO 73153 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-03-07 14:14:39.200  WARN 73200 --- [main] o.s.boot.StartupInfoLogger               : InetAddress.getLocalHost().getHostName() took 5010 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2020-03-07 14:14:44.215  INFO 73200 --- [main] c.task.wizbackend.WizbackendApplication  : Starting WizbackendApplication on Sagars-MacBook-Air.local with PID 73200 (/Users/sagar/Desktop/wiz-backend/wizbackend/target/classes started by sagar in /Users/sagar/Desktop/wiz-backend/wizbackend)
+2020-03-07 14:14:44.216 DEBUG 73200 --- [main] c.task.wizbackend.WizbackendApplication  : Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-03-07 14:14:44.218  INFO 73200 --- [main] c.task.wizbackend.WizbackendApplication  : No active profile set, falling back to default profiles: default
+2020-03-07 14:14:45.375  INFO 73200 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-03-07 14:14:45.534  INFO 73200 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 136ms. Found 1 JPA repository interfaces.
+2020-03-07 14:14:46.776  INFO 73200 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9000 (http)
+2020-03-07 14:14:46.789  INFO 73200 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-07 14:14:46.789  INFO 73200 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-07 14:14:46.933  INFO 73200 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-07 14:14:46.934  INFO 73200 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2646 ms
+2020-03-07 14:14:47.697  INFO 73200 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-03-07 14:14:47.702  WARN 73200 --- [main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2020-03-07 14:14:47.962  INFO 73200 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-03-07 14:14:49.079  INFO 73200 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-03-07 14:14:49.178  WARN 73200 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-03-07 14:14:49.287  INFO 73200 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static java.lang.String com.task.wizbackend.serviceImpl.StudentService.jwtTokenCookieName
+2020-03-07 14:14:50.100  INFO 73200 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 88e9a621-759e-428d-aab3-afd919a3504f
+
+2020-03-07 14:14:50.233  INFO 73200 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/'], []
+2020-03-07 14:14:50.234  INFO 73200 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/assets/**'], []
+2020-03-07 14:14:50.234  INFO 73200 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.js'], []
+2020-03-07 14:14:50.234  INFO 73200 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.css'], []
+2020-03-07 14:14:50.234  INFO 73200 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.eot'], []
+2020-03-07 14:14:50.234  INFO 73200 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.svg'], []
+2020-03-07 14:14:50.234  INFO 73200 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.woff2'], []
+2020-03-07 14:14:50.234  INFO 73200 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.ttf'], []
+2020-03-07 14:14:50.235  INFO 73200 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.woff'], []
+2020-03-07 14:14:50.236  INFO 73200 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.jpg'], []
+2020-03-07 14:14:50.236  INFO 73200 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.png'], []
+2020-03-07 14:14:50.236  INFO 73200 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.html'], []
+2020-03-07 14:14:50.236  INFO 73200 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/student'], []
+2020-03-07 14:14:50.236  INFO 73200 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/login'], []
+2020-03-07 14:14:50.237  INFO 73200 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.ico'], []
+2020-03-07 14:14:50.316  INFO 73200 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/**'], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3a0896b3, org.springframework.security.web.context.SecurityContextPersistenceFilter@5940b14e, org.springframework.security.web.header.HeaderWriterFilter@1af677f8, org.springframework.web.filter.CorsFilter@50a7c72b, org.springframework.security.web.authentication.logout.LogoutFilter@1f7e52d1, com.task.wizbackend.filter.JwtFilter@54c11750, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@795f6681, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3e0a9b1d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@221b77d7, org.springframework.security.web.session.SessionManagementFilter@7272ee51, org.springframework.security.web.access.ExceptionTranslationFilter@33627576, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@65844c96]
+2020-03-07 14:14:50.573  INFO 73200 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-07 14:14:50.960  INFO 73200 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9000 (http) with context path ''
+2020-03-07 14:14:50.964  INFO 73200 --- [main] c.task.wizbackend.WizbackendApplication  : Started WizbackendApplication in 22.717 seconds (JVM running for 23.626)
+2020-03-07 14:15:07.379  INFO 73200 --- [http-nio-9000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-07 14:15:07.381  INFO 73200 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-07 14:15:07.410  INFO 73200 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 28 ms
+2020-03-07 14:17:03.441  INFO 73200 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-07 14:17:03.445  INFO 73200 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-03-07 14:17:03.453  INFO 73200 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-03-07 14:17:03.488  INFO 73200 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-03-07 14:17:18.480  WARN 73216 --- [main] o.s.boot.StartupInfoLogger               : InetAddress.getLocalHost().getHostName() took 5006 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2020-03-07 14:17:23.494  INFO 73216 --- [main] c.task.wizbackend.WizbackendApplication  : Starting WizbackendApplication on Sagars-MacBook-Air.local with PID 73216 (/Users/sagar/Desktop/wiz-backend/wizbackend/target/classes started by sagar in /Users/sagar/Desktop/wiz-backend/wizbackend)
+2020-03-07 14:17:23.495 DEBUG 73216 --- [main] c.task.wizbackend.WizbackendApplication  : Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-03-07 14:17:23.497  INFO 73216 --- [main] c.task.wizbackend.WizbackendApplication  : No active profile set, falling back to default profiles: default
+2020-03-07 14:17:24.551  INFO 73216 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-03-07 14:17:24.695  INFO 73216 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 125ms. Found 1 JPA repository interfaces.
+2020-03-07 14:17:25.778  INFO 73216 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9000 (http)
+2020-03-07 14:17:25.806  INFO 73216 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-07 14:17:25.806  INFO 73216 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-07 14:17:25.977  INFO 73216 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-07 14:17:25.977  INFO 73216 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2416 ms
+2020-03-07 14:17:26.853  INFO 73216 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-03-07 14:17:26.859  WARN 73216 --- [main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2020-03-07 14:17:27.152  INFO 73216 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-03-07 14:17:28.271  INFO 73216 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-03-07 14:17:28.359  WARN 73216 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-03-07 14:17:28.452  INFO 73216 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static java.lang.String com.task.wizbackend.serviceImpl.StudentService.jwtTokenCookieName
+2020-03-07 14:17:29.133  INFO 73216 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 01028144-ab03-4661-812e-0932b7c279a4
+
+2020-03-07 14:17:29.233  INFO 73216 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/'], []
+2020-03-07 14:17:29.234  INFO 73216 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/assets/**'], []
+2020-03-07 14:17:29.234  INFO 73216 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.js'], []
+2020-03-07 14:17:29.234  INFO 73216 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.css'], []
+2020-03-07 14:17:29.235  INFO 73216 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.eot'], []
+2020-03-07 14:17:29.235  INFO 73216 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.svg'], []
+2020-03-07 14:17:29.235  INFO 73216 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.woff2'], []
+2020-03-07 14:17:29.235  INFO 73216 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.ttf'], []
+2020-03-07 14:17:29.236  INFO 73216 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.woff'], []
+2020-03-07 14:17:29.236  INFO 73216 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.jpg'], []
+2020-03-07 14:17:29.236  INFO 73216 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.png'], []
+2020-03-07 14:17:29.236  INFO 73216 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.html'], []
+2020-03-07 14:17:29.236  INFO 73216 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/student'], []
+2020-03-07 14:17:29.236  INFO 73216 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/login'], []
+2020-03-07 14:17:29.237  INFO 73216 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.ico'], []
+2020-03-07 14:17:29.297  INFO 73216 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/**'], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@22865072, org.springframework.security.web.context.SecurityContextPersistenceFilter@5a3cf878, org.springframework.security.web.header.HeaderWriterFilter@41f964f9, org.springframework.web.filter.CorsFilter@563317c1, org.springframework.security.web.authentication.logout.LogoutFilter@3271ec2a, com.task.wizbackend.filter.JwtFilter@5d5d3a5c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@34cd65ac, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1cba0321, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6e0d16a4, org.springframework.security.web.session.SessionManagementFilter@1af677f8, org.springframework.security.web.access.ExceptionTranslationFilter@684372d0, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@65859b44]
+2020-03-07 14:17:29.549  INFO 73216 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-07 14:17:29.895  INFO 73216 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9000 (http) with context path ''
+2020-03-07 14:17:29.900  INFO 73216 --- [main] c.task.wizbackend.WizbackendApplication  : Started WizbackendApplication in 22.18 seconds (JVM running for 23.022)
+2020-03-07 14:17:49.949  INFO 73216 --- [http-nio-9000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-07 14:17:49.952  INFO 73216 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-07 14:17:49.963  INFO 73216 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2020-03-07 14:18:29.349 ERROR 73216 --- [http-nio-9000-exec-2] c.t.w.serviceImpl.StudentService         : exception occured at:: Sat Mar 07 14:18:29 IST 2020
+2020-03-07 14:18:29.350 ERROR 73216 --- [http-nio-9000-exec-2] c.t.w.controller.AuthController          : exception occured at Duplicate key found
+2020-03-07 14:23:23.288  INFO 73216 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-07 14:23:23.294  INFO 73216 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-03-07 14:23:23.299  INFO 73216 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-03-07 14:23:23.331  INFO 73216 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-03-07 14:23:39.999  WARN 73229 --- [main] o.s.boot.StartupInfoLogger               : InetAddress.getLocalHost().getHostName() took 5003 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2020-03-07 14:23:45.015  INFO 73229 --- [main] c.task.wizbackend.WizbackendApplication  : Starting WizbackendApplication on Sagars-MacBook-Air.local with PID 73229 (/Users/sagar/Desktop/wiz-backend/wizbackend/target/classes started by sagar in /Users/sagar/Desktop/wiz-backend/wizbackend)
+2020-03-07 14:23:45.016 DEBUG 73229 --- [main] c.task.wizbackend.WizbackendApplication  : Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-03-07 14:23:45.021  INFO 73229 --- [main] c.task.wizbackend.WizbackendApplication  : No active profile set, falling back to default profiles: default
+2020-03-07 14:23:46.483  INFO 73229 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-03-07 14:23:46.608  INFO 73229 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 110ms. Found 1 JPA repository interfaces.
+2020-03-07 14:23:47.748  INFO 73229 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9000 (http)
+2020-03-07 14:23:47.771  INFO 73229 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-07 14:23:47.772  INFO 73229 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-07 14:23:47.921  INFO 73229 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-07 14:23:47.921  INFO 73229 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2797 ms
+2020-03-07 14:23:48.833  INFO 73229 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-03-07 14:23:48.838  WARN 73229 --- [main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2020-03-07 14:23:49.111  INFO 73229 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-03-07 14:23:50.230  INFO 73229 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-03-07 14:23:50.316  WARN 73229 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-03-07 14:23:50.419  INFO 73229 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static java.lang.String com.task.wizbackend.serviceImpl.StudentService.jwtTokenCookieName
+2020-03-07 14:23:51.164  INFO 73229 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: fb60757d-0fa5-411c-af58-03499930e606
+
+2020-03-07 14:23:51.251  INFO 73229 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/'], []
+2020-03-07 14:23:51.251  INFO 73229 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/assets/**'], []
+2020-03-07 14:23:51.251  INFO 73229 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.js'], []
+2020-03-07 14:23:51.252  INFO 73229 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.css'], []
+2020-03-07 14:23:51.252  INFO 73229 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.eot'], []
+2020-03-07 14:23:51.252  INFO 73229 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.svg'], []
+2020-03-07 14:23:51.252  INFO 73229 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.woff2'], []
+2020-03-07 14:23:51.252  INFO 73229 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.ttf'], []
+2020-03-07 14:23:51.252  INFO 73229 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.woff'], []
+2020-03-07 14:23:51.253  INFO 73229 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.jpg'], []
+2020-03-07 14:23:51.253  INFO 73229 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.png'], []
+2020-03-07 14:23:51.253  INFO 73229 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.html'], []
+2020-03-07 14:23:51.253  INFO 73229 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/student'], []
+2020-03-07 14:23:51.254  INFO 73229 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/login'], []
+2020-03-07 14:23:51.254  INFO 73229 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.ico'], []
+2020-03-07 14:23:51.326  INFO 73229 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/**'], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@59f45950, org.springframework.security.web.context.SecurityContextPersistenceFilter@27df5806, org.springframework.security.web.header.HeaderWriterFilter@5cce40d7, org.springframework.web.filter.CorsFilter@7871d261, org.springframework.security.web.authentication.logout.LogoutFilter@4e4894d, com.task.wizbackend.filter.JwtFilter@58164e9a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3214bad, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4c5406b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@11bfffb3, org.springframework.security.web.session.SessionManagementFilter@59d6642a, org.springframework.security.web.access.ExceptionTranslationFilter@e01a26b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4ef5dd23]
+2020-03-07 14:23:51.597  INFO 73229 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-07 14:23:52.029  INFO 73229 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9000 (http) with context path ''
+2020-03-07 14:23:52.034  INFO 73229 --- [main] c.task.wizbackend.WizbackendApplication  : Started WizbackendApplication in 23.15 seconds (JVM running for 24.734)
+2020-03-07 14:28:11.740  INFO 73229 --- [http-nio-9000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-07 14:28:11.742  INFO 73229 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-07 14:28:11.764  INFO 73229 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 22 ms
+2020-03-07 14:48:45.541  INFO 73229 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-07 14:48:45.549  INFO 73229 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-03-07 14:48:45.562  INFO 73229 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-03-07 14:48:45.608  INFO 73229 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-03-07 14:49:02.423  WARN 73562 --- [main] o.s.boot.StartupInfoLogger               : InetAddress.getLocalHost().getHostName() took 5001 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2020-03-07 14:49:07.437  INFO 73562 --- [main] c.task.wizbackend.WizbackendApplication  : Starting WizbackendApplication on Sagars-MacBook-Air.local with PID 73562 (/Users/sagar/Desktop/wiz-backend/wizbackend/target/classes started by sagar in /Users/sagar/Desktop/wiz-backend/wizbackend)
+2020-03-07 14:49:07.439 DEBUG 73562 --- [main] c.task.wizbackend.WizbackendApplication  : Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-03-07 14:49:07.440  INFO 73562 --- [main] c.task.wizbackend.WizbackendApplication  : No active profile set, falling back to default profiles: default
+2020-03-07 14:49:08.349  INFO 73562 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-03-07 14:49:08.446  INFO 73562 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 85ms. Found 1 JPA repository interfaces.
+2020-03-07 14:49:09.496  INFO 73562 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9000 (http)
+2020-03-07 14:49:09.513  INFO 73562 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-07 14:49:09.514  INFO 73562 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-07 14:49:09.699  INFO 73562 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-07 14:49:09.700  INFO 73562 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2195 ms
+2020-03-07 14:49:10.705  INFO 73562 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-03-07 14:49:10.709  WARN 73562 --- [main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2020-03-07 14:49:10.983  INFO 73562 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-03-07 14:49:12.004  INFO 73562 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-03-07 14:49:12.094  WARN 73562 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-03-07 14:49:12.175  INFO 73562 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static java.lang.String com.task.wizbackend.serviceImpl.StudentService.jwtTokenCookieName
+2020-03-07 14:49:12.832  INFO 73562 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: c20626db-dcd2-49aa-b7ee-00f86a06e380
+
+2020-03-07 14:49:12.921  INFO 73562 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/'], []
+2020-03-07 14:49:12.921  INFO 73562 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/assets/**'], []
+2020-03-07 14:49:12.922  INFO 73562 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.js'], []
+2020-03-07 14:49:12.922  INFO 73562 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.css'], []
+2020-03-07 14:49:12.922  INFO 73562 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.eot'], []
+2020-03-07 14:49:12.923  INFO 73562 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.svg'], []
+2020-03-07 14:49:12.923  INFO 73562 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.woff2'], []
+2020-03-07 14:49:12.924  INFO 73562 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.ttf'], []
+2020-03-07 14:49:12.924  INFO 73562 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.woff'], []
+2020-03-07 14:49:12.924  INFO 73562 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.jpg'], []
+2020-03-07 14:49:12.924  INFO 73562 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.png'], []
+2020-03-07 14:49:12.925  INFO 73562 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.html'], []
+2020-03-07 14:49:12.925  INFO 73562 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/student'], []
+2020-03-07 14:49:12.925  INFO 73562 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/login'], []
+2020-03-07 14:49:12.925  INFO 73562 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.ico'], []
+2020-03-07 14:49:12.988  INFO 73562 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/**'], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3ef3f661, org.springframework.security.web.context.SecurityContextPersistenceFilter@203b953c, org.springframework.security.web.header.HeaderWriterFilter@643ecfef, org.springframework.web.filter.CorsFilter@baa9ce4, org.springframework.security.web.authentication.logout.LogoutFilter@1b409a79, com.task.wizbackend.filter.JwtFilter@5b332439, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@41a16eb3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@684372d0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@59262a90, org.springframework.security.web.session.SessionManagementFilter@6e807e2, org.springframework.security.web.access.ExceptionTranslationFilter@aa752bb, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3e52ed5d]
+2020-03-07 14:49:13.252  INFO 73562 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-07 14:49:13.594  INFO 73562 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9000 (http) with context path ''
+2020-03-07 14:49:13.599  INFO 73562 --- [main] c.task.wizbackend.WizbackendApplication  : Started WizbackendApplication in 21.953 seconds (JVM running for 22.821)
+2020-03-07 14:49:38.024  INFO 73562 --- [http-nio-9000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-07 14:49:38.030  INFO 73562 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-07 14:49:38.044  INFO 73562 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 14 ms
+2020-03-07 15:09:31.735  INFO 73562 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-07 15:09:31.743  INFO 73562 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-03-07 15:09:31.758  INFO 73562 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-03-07 15:09:31.815  INFO 73562 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-03-07 15:09:49.758  WARN 73765 --- [main] o.s.boot.StartupInfoLogger               : InetAddress.getLocalHost().getHostName() took 5003 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2020-03-07 15:09:54.770  INFO 73765 --- [main] c.task.wizbackend.WizbackendApplication  : Starting WizbackendApplication on Sagars-MacBook-Air.local with PID 73765 (/Users/sagar/Desktop/wiz-backend/wizbackend/target/classes started by sagar in /Users/sagar/Desktop/wiz-backend/wizbackend)
+2020-03-07 15:09:54.771 DEBUG 73765 --- [main] c.task.wizbackend.WizbackendApplication  : Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-03-07 15:09:54.773  INFO 73765 --- [main] c.task.wizbackend.WizbackendApplication  : No active profile set, falling back to default profiles: default
+2020-03-07 15:09:55.733  INFO 73765 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-03-07 15:09:55.842  INFO 73765 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 93ms. Found 1 JPA repository interfaces.
+2020-03-07 15:09:56.892  INFO 73765 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9000 (http)
+2020-03-07 15:09:56.915  INFO 73765 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-07 15:09:56.915  INFO 73765 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-07 15:09:57.081  INFO 73765 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-07 15:09:57.082  INFO 73765 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2245 ms
+2020-03-07 15:09:57.934  INFO 73765 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-03-07 15:09:57.938  WARN 73765 --- [main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2020-03-07 15:09:58.201  INFO 73765 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-03-07 15:09:59.251  INFO 73765 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-03-07 15:09:59.321  WARN 73765 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-03-07 15:09:59.386  INFO 73765 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static java.lang.String com.task.wizbackend.serviceImpl.StudentService.jwtTokenCookieName
+2020-03-07 15:10:00.002  INFO 73765 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 587646d1-bf08-47be-8992-e493cee90da9
+
+2020-03-07 15:10:00.105  INFO 73765 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/'], []
+2020-03-07 15:10:00.106  INFO 73765 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/assets/**'], []
+2020-03-07 15:10:00.106  INFO 73765 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.js'], []
+2020-03-07 15:10:00.106  INFO 73765 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.css'], []
+2020-03-07 15:10:00.106  INFO 73765 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.eot'], []
+2020-03-07 15:10:00.106  INFO 73765 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.svg'], []
+2020-03-07 15:10:00.106  INFO 73765 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.woff2'], []
+2020-03-07 15:10:00.106  INFO 73765 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.ttf'], []
+2020-03-07 15:10:00.106  INFO 73765 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.woff'], []
+2020-03-07 15:10:00.107  INFO 73765 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.jpg'], []
+2020-03-07 15:10:00.107  INFO 73765 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.png'], []
+2020-03-07 15:10:00.107  INFO 73765 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.html'], []
+2020-03-07 15:10:00.107  INFO 73765 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/student'], []
+2020-03-07 15:10:00.107  INFO 73765 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/login'], []
+2020-03-07 15:10:00.107  INFO 73765 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.ico'], []
+2020-03-07 15:10:00.163  INFO 73765 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/**'], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4e4894d, org.springframework.security.web.context.SecurityContextPersistenceFilter@389a5022, org.springframework.security.web.header.HeaderWriterFilter@7d401cdc, org.springframework.web.filter.CorsFilter@1de5cc88, org.springframework.security.web.authentication.logout.LogoutFilter@34cd65ac, com.task.wizbackend.filter.JwtFilter@23e2c1ca, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5b44318, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1b1252c8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2d4fb0d8, org.springframework.security.web.session.SessionManagementFilter@3c16528d, org.springframework.security.web.access.ExceptionTranslationFilter@120350eb, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3ca17943]
+2020-03-07 15:10:00.411  INFO 73765 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-07 15:10:00.753  INFO 73765 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9000 (http) with context path ''
+2020-03-07 15:10:00.757  INFO 73765 --- [main] c.task.wizbackend.WizbackendApplication  : Started WizbackendApplication in 21.72 seconds (JVM running for 22.716)
+2020-03-07 15:31:10.720  INFO 73765 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-07 15:31:10.728  INFO 73765 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-03-07 15:31:10.735  INFO 73765 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-03-07 15:31:10.772  INFO 73765 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-03-07 15:31:27.499  WARN 74164 --- [main] o.s.boot.StartupInfoLogger               : InetAddress.getLocalHost().getHostName() took 5003 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2020-03-07 15:31:32.511  INFO 74164 --- [main] c.task.wizbackend.WizbackendApplication  : Starting WizbackendApplication on Sagars-MacBook-Air.local with PID 74164 (/Users/sagar/Desktop/wiz-backend/wizbackend/target/classes started by sagar in /Users/sagar/Desktop/wiz-backend/wizbackend)
+2020-03-07 15:31:32.512 DEBUG 74164 --- [main] c.task.wizbackend.WizbackendApplication  : Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-03-07 15:31:32.513  INFO 74164 --- [main] c.task.wizbackend.WizbackendApplication  : No active profile set, falling back to default profiles: default
+2020-03-07 15:31:34.364  INFO 74164 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-03-07 15:31:34.559  INFO 74164 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 168ms. Found 1 JPA repository interfaces.
+2020-03-07 15:31:36.628  INFO 74164 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9000 (http)
+2020-03-07 15:31:36.658  INFO 74164 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-07 15:31:36.658  INFO 74164 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-07 15:31:36.961  INFO 74164 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-07 15:31:36.963  INFO 74164 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4338 ms
+2020-03-07 15:31:38.438  INFO 74164 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-03-07 15:31:38.445  WARN 74164 --- [main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2020-03-07 15:31:38.931  INFO 74164 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-03-07 15:31:40.829  INFO 74164 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-03-07 15:31:40.986  WARN 74164 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-03-07 15:31:41.109  INFO 74164 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: private static java.lang.String com.task.wizbackend.serviceImpl.StudentService.jwtTokenCookieName
+2020-03-07 15:31:42.300  INFO 74164 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 2a1dfeae-e4f4-40d8-b350-cd9e2e46f122
+
+2020-03-07 15:31:42.525  INFO 74164 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/'], []
+2020-03-07 15:31:42.525  INFO 74164 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/assets/**'], []
+2020-03-07 15:31:42.525  INFO 74164 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.js'], []
+2020-03-07 15:31:42.525  INFO 74164 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.css'], []
+2020-03-07 15:31:42.525  INFO 74164 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.eot'], []
+2020-03-07 15:31:42.526  INFO 74164 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.svg'], []
+2020-03-07 15:31:42.526  INFO 74164 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.woff2'], []
+2020-03-07 15:31:42.526  INFO 74164 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.ttf'], []
+2020-03-07 15:31:42.526  INFO 74164 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.woff'], []
+2020-03-07 15:31:42.528  INFO 74164 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.jpg'], []
+2020-03-07 15:31:42.528  INFO 74164 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.png'], []
+2020-03-07 15:31:42.528  INFO 74164 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.html'], []
+2020-03-07 15:31:42.528  INFO 74164 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/student'], []
+2020-03-07 15:31:42.528  INFO 74164 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/login'], []
+2020-03-07 15:31:42.529  INFO 74164 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.ico'], []
+2020-03-07 15:31:42.678  INFO 74164 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/**'], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@dc1fadd, org.springframework.security.web.context.SecurityContextPersistenceFilter@6c995c5d, org.springframework.security.web.header.HeaderWriterFilter@77fc19cf, org.springframework.web.filter.CorsFilter@3ef3f661, org.springframework.security.web.authentication.logout.LogoutFilter@7272ee51, com.task.wizbackend.filter.JwtFilter@baa9ce4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@730bea0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5873f3f0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5b332439, org.springframework.security.web.session.SessionManagementFilter@5b44318, org.springframework.security.web.access.ExceptionTranslationFilter@4217bce6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3bd08435]
+2020-03-07 15:31:43.134  INFO 74164 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-07 15:31:43.671  INFO 74164 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9000 (http) with context path ''
+2020-03-07 15:31:43.677  INFO 74164 --- [main] c.task.wizbackend.WizbackendApplication  : Started WizbackendApplication in 27.059 seconds (JVM running for 28.249)
+2020-03-07 15:34:18.854  INFO 74164 --- [http-nio-9000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-07 15:34:18.855  INFO 74164 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-07 15:34:18.867  INFO 74164 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
+2020-03-07 15:46:51.323 ERROR 74164 --- [http-nio-9000-exec-1] c.t.w.serviceImpl.StudentService         : exception occured at:: Sat Mar 07 15:46:51 IST 2020
+2020-03-07 15:46:51.330 ERROR 74164 --- [http-nio-9000-exec-1] c.t.w.controller.AuthController          : exception occured at Duplicate key found

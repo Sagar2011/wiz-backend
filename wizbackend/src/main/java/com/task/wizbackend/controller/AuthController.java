@@ -1,6 +1,8 @@
 package com.task.wizbackend.controller;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.task.wizbackend.iservice.IStudentService;
+import com.task.wizbackend.model.ResponseModel;
 import com.task.wizbackend.model.Student;
 import com.task.wizbackend.util.CookieUtil;
 import com.task.wizbackend.util.JwtUtil;
@@ -8,24 +10,29 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestHeader;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.view.RedirectView;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
+@CrossOrigin("*")
 @Controller
 public class AuthController {
 
     @Autowired
     private IStudentService iStudentService;
+
+    @Autowired
+    private ResponseModel responseModel;
     static String domain;
     static String jwtTokenCookieName;
-    static String redirectUrl;
     @Value("${Domain}")
     public void setDomain(String Domain) {
         domain = Domain;
@@ -36,23 +43,22 @@ public class AuthController {
         jwtTokenCookieName = cookieName;
     }
 
-    @Value("${redirect-url}")
-    public void setUrl(String url) {
-       redirectUrl = url;
-    }
+
 
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
 
     @GetMapping("/login")
-    public RedirectView login(@RequestHeader String username, @RequestHeader String password, HttpServletResponse httpServletResponse){
+    public ResponseEntity<?>  login(@RequestHeader String username, @RequestHeader String password, HttpServletResponse httpServletResponse){
       try{  Student student = iStudentService.getStudent(username,password);
         String jwtToken = JwtUtil.addToken(student);
-        Cookie cookie = CookieUtil.create(httpServletResponse, jwtTokenCookieName, jwtToken, false, -1, domain);
-        RedirectView redirectview = new RedirectView();
-        redirectview.setUrl(redirectUrl);
-        return redirectview;
+          responseModel.setStatusCode(200);
+          responseModel.setMessage("registered");
+          ArrayList<String> result = new ArrayList<>();
+          result.add(jwtToken);
+          responseModel.setResults(result);
+          return new ResponseEntity<ResponseModel>(responseModel,HttpStatus.OK);
     }catch (Exception ex){
             logger.error("exception occured at {}", ex.getMessage());
             return null;
@@ -60,14 +66,16 @@ public class AuthController {
     }
 
     @PostMapping("/student")
-    public RedirectView registerStudent(@RequestBody Student student, HttpServletResponse httpServletResponse){
+    public ResponseEntity<?> registerStudent(@RequestBody Student student, HttpServletResponse httpServletResponse){
         try{
             iStudentService.saveStudent(student);
             String jwtToken = JwtUtil.addToken(student);
-            Cookie cookie = CookieUtil.create(httpServletResponse, jwtTokenCookieName, jwtToken, false, -1, domain);
-            RedirectView redirectview = new RedirectView();
-            redirectview.setUrl(redirectUrl);
-            return redirectview;
+            responseModel.setStatusCode(200);
+            responseModel.setMessage("registered");
+            ArrayList<String> result = new ArrayList<>();
+            result.add(jwtToken);
+            responseModel.setResults(result);
+            return new ResponseEntity<ResponseModel>(responseModel,HttpStatus.OK);
         }catch (Exception ex){
             logger.error("exception occured at {}", ex.getMessage());
             return null;
